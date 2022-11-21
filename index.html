@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priority to do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="input_detail">
+        <input type="text" id="input_task" class="task" placeholder="Enter Task">
+        <select class="input_priority">
+            <option>Task Priority</option>
+            <option class="high">High Priority</option>
+            <option class="medium">Medium Priority</option>
+            <option class="low">Low Priority</option>
+        </select>
+        <select  class="search_priority">
+            <option>search by priority</option>
+            <!-- <option>All</option> -->
+            <option>High Priority</option>
+            <option>Medium Priority</option>
+            <option>Low Priority</option>
+            </select>
+        <input type="submit" id="submit_btn" class="btn">
+   </form>
+
+   <ul class="output_list"></ul>
+
+    <script src="index.js"></script>
+</body>
+</html>
