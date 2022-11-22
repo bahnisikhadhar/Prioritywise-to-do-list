@@ -42,7 +42,6 @@ body {
 
 /*************************************************************************************************************** */
 .text_li {
-    /* background-color: wheat; */
     list-style: none;
     display: flex;
     flex-wrap: wrap;

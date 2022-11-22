@@ -38,17 +38,27 @@ inputSubmit.addEventListener("click", (event) => {
         row.classList.add("green");
     }
 
-    const all=document.querySelectorAll(".text_li");
+    const all=document.getElementsByClassName("text_li");
     console.log(all);
     
-    const highPriority= document.querySelectorAll(".red");
+    const highPriority= document.getElementsByClassName("red");
     console.log(highPriority);
 
-    const midPriority=document.querySelectorAll(".yellow");
+    const midPriority=document.getElementsByClassName("yellow");
     console.log(midPriority)
 
-    const lowPriority=document.querySelectorAll(".green");
+    const lowPriority=document.getElementsByClassName("green");
     console.log(lowPriority)
+
+    if(searchPriority.value=="All")
+    {
+        for(let i=0;i<all.length;i++)
+        {
+            console.log(all[i])
+            all[i].classList.remove("display_none");
+            row.remove();
+        }
+    } 
 
     if(searchPriority.value=="High Priority")
     {
@@ -60,26 +70,32 @@ inputSubmit.addEventListener("click", (event) => {
             highPriority[i].classList.remove("display_none");
             row.remove();
         }
+       
     }
+
     if(searchPriority.value=="Medium Priority")
     {
         for(let i=0;i<highPriority.length || i<lowPriority.length;i++)
         {
-            midPriority[i].classList.remove("display_none");
+            
             lowPriority[i].classList.add("display_none");
             highPriority[i].classList.add("display_none");
+            midPriority[i].classList.remove("display_none");
             row.remove()
         }
+        
     }
+
     if(searchPriority.value=="Low Priority")
     {
         for(let i=0;i<highPriority.length || i<midPriority.length;i++)
         {
             midPriority[i].classList.add("display_none");
-            lowPriority[i].classList.remove("display_none");
             highPriority[i].classList.add("display_none");
+            lowPriority[i].classList.remove("display_none");
             row.remove()
         }
+       
     }
 
     deleteButton.addEventListener("click",(event)=>{
