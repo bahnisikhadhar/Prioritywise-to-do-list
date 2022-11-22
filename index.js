@@ -50,6 +50,15 @@ inputSubmit.addEventListener("click", (event) => {
     const lowPriority=document.querySelectorAll(".green");
     console.log(lowPriority)
 
+    if(searchPriority.value=="All")
+    {
+        for(let i=0;i<all.length;i++)
+        {
+            all[i].classList.remove("display_none");
+            row.remove();
+        }
+    }
+
     if(searchPriority.value=="High Priority")
     {
         for(let i=0;i<lowPriority.length || i<midPriority.length;i++)
